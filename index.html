@@ -11,6 +11,9 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/logo-new.png">
   <link rel="icon" type="image/png" href="assets/logo-new.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -50,6 +53,7 @@
         <a href="#journey" class="nav-link">Care Journey</a>
         <a href="#warning-signs" class="nav-link">Warning Signs</a>
         <a href="#doctors" class="nav-link">Doctors</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-cta">
@@ -65,31 +69,23 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-bg" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+        <img class="hero-photo" src="assets/hero-art.jpg" alt="" fetchpriority="high">
+        <div class="hero-scrim"></div>
       </div>
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="eyebrow anim" style="--d:.05s">Advance Center for Diabetic Foot Care &mdash; Karimnagar</p>
-          <h1 class="anim" style="--d:.15s">Complete Care for <span>Diabetic Foot</span> &amp; All Foot Problems</h1>
-          <p class="lede anim" style="--d:.25s">Expert diagnosis, treatment, and follow-up for diabetic foot problems &mdash; all under one roof.</p>
+          <h1 class="anim serif" style="--d:.15s">Where every step finds <em>expert care</em></h1>
+          <p class="lede anim" style="--d:.25s">Complete diagnosis, treatment and follow-up for diabetic foot &amp; all foot problems &mdash; all under one roof, open 24 hours.</p>
           <div class="hero-actions anim" style="--d:.35s">
-            <a class="btn btn-primary" href="tel:+919912510108">Call Now</a>
+            <a class="btn btn-gold" href="tel:+919912510108">Book Free Thursday Visit</a>
             <a class="btn btn-ghost" href="https://wa.me/919912510108" target="_blank" rel="noopener">WhatsApp Us</a>
           </div>
-        </div>
-        <div class="hero-cards">
-          <div class="glass-card anim" style="--d:.5s">
-            <span class="glass-tag">Every Thursday</span>
-            <strong>Free Diabetic Foot Consultation</strong>
-            <a href="tel:+919912510108">Book your slot &rarr;</a>
-          </div>
-          <div class="glass-card anim" style="--d:.65s">
-            <span class="glass-tag">Open 24 Hours</span>
-            <strong>Foot emergency? We&rsquo;re here.</strong>
-            <a href="tel:+919912510108">9912510108</a>
-          </div>
+          <ul class="hero-points anim" style="--d:.45s">
+            <li>Expert Care</li>
+            <li>Advanced Technology</li>
+            <li>Better Mobility</li>
+          </ul>
         </div>
       </div>
       <div class="stat-band">
@@ -227,27 +223,26 @@
     </section>
 
     <!-- DOCTORS -->
-    <section class="section section-tint" id="doctors">
+    <section class="section section-doctors" id="doctors">
       <div class="container">
         <p class="section-eyebrow reveal">Meet our doctors</p>
-        <h2 class="section-title reveal" style="--d:.1s">Expert Care You Can Trust</h2>
+        <h2 class="section-title serif reveal" style="--d:.1s">The hands behind <em>healthy feet</em></h2>
+        <p class="section-sub reveal" style="--d:.15s">Two specialists, one team &mdash; a diabetologist and a plastic surgeon working together on every case.</p>
         <div class="doctors">
           <article class="doctor lift reveal" style="--d:.1s">
-            <div class="doctor-photo"><img src="assets/doctor-sreekar-full.jpg" alt="Dr Sreekar Sura"></div>
+            <div class="doctor-photo"><img src="assets/doctor-sreekar-full.jpg" alt="Dr Sreekar Sura" loading="lazy"></div>
             <div class="doctor-info">
-              <h3>Dr Sreekar Sura</h3>
+              <h3 class="serif">Dr Sreekar Sura</h3>
               <p class="quals">MBBS, MD (Gen Med)</p>
               <p class="role">Diabetologist</p>
-              <p class="focus">Diabetology &amp; diabetic foot care</p>
             </div>
           </article>
           <article class="doctor lift reveal" style="--d:.2s">
-            <div class="doctor-photo"><img src="assets/doctor-ashok-full.png" alt="Dr Ashok Reddy"></div>
+            <div class="doctor-photo"><img src="assets/doctor-ashok-full.png" alt="Dr Ashok Reddy" loading="lazy"></div>
             <div class="doctor-info">
-              <h3>Dr Ashok Reddy</h3>
+              <h3 class="serif">Dr Ashok Reddy</h3>
               <p class="quals">MBBS, DNB, MCH</p>
               <p class="role">Plastic &amp; Cosmetic Surgeon</p>
-              <p class="focus">Plastic, cosmetic &amp; hair transplant surgery</p>
             </div>
           </article>
         </div>
@@ -264,6 +259,51 @@
           <div class="card lift reveal" style="--d:.12s"><h3>Advanced Treatment</h3><p>Modern technology and evidence-based protocols for faster healing.</p></div>
           <div class="card lift reveal" style="--d:.19s"><h3>Personalized Plans</h3><p>Treatment tailored to your condition, lifestyle and recovery goals.</p></div>
           <div class="card lift reveal" style="--d:.26s"><h3>Patient-Centric Care</h3><p>Compassionate follow-up at every step &mdash; we care for every step.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <p class="section-eyebrow reveal">Good to know</p>
+        <h2 class="section-title serif reveal" style="--d:.1s">Questions, <em>answered</em></h2>
+        <div class="faq-list reveal" style="--d:.15s">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Is the Thursday consultation really free?
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a"><p>Yes. Every Thursday, our specialists offer a free diabetic foot consultation &mdash; including a foot assessment. Call <a href="tel:+919912510108">9912510108</a> to reserve your slot.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Do I need an appointment, or can I walk in?
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a"><p>The clinic is open 24 hours. Booking ahead on call or WhatsApp helps us give you a fixed time, but walk-ins are welcome.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What happens during a foot assessment?
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a"><p>We examine your feet, skin, circulation and nerve health, then explain the diagnosis and a personalised treatment plan in simple terms.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Do you treat foot problems not related to diabetes?
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a"><p>Yes. We treat heel pain and plantar fasciitis, corns, callus and cracks, sports injuries and post-surgical foot care &mdash; for everyone.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Where is the clinic located?
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-a"><p>3-6-767, Subashnagar Railway Station Road, Karimnagar 505001, Telangana &mdash; <a href="https://www.google.com/maps/search/?api=1&amp;query=Dhruva+Foot+Health+Clinic+Karimnagar" target="_blank" rel="noopener">get directions</a>.</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -331,6 +371,7 @@
         <a href="#journey">Care Journey</a>
         <a href="#treatments">Treatments</a>
         <a href="#doctors">Doctors</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-col">

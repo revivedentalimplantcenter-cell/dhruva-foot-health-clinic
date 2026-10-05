@@ -111,7 +111,7 @@
     heroH1.innerHTML = "";
     var wi = 0;
     fragNodes.forEach(function (n) {
-      var isGold = n.nodeType === 1;
+      var isEm = n.nodeType === 1;
       n.textContent.split(/(\s+)/).forEach(function (part) {
         if (!part) return;
         if (/^\s+$/.test(part)) {
@@ -121,7 +121,7 @@
         var mask = document.createElement("span");
         mask.className = "w-mask";
         var w = document.createElement("span");
-        w.className = "w" + (isGold ? " gold-w" : "");
+        w.className = "w" + (isEm ? " gold-w em-w" : "");
         w.textContent = part;
         w.style.setProperty("--wd", (0.55 + wi * 0.07).toFixed(2) + "s");
         mask.appendChild(w);
@@ -162,33 +162,33 @@
   var finePointer = window.matchMedia("(pointer: fine)").matches;
   if (finePointer && !reduceMotion) {
 
-    /* Hero orb parallax */
-    var hero = document.querySelector(".hero");
-    var orbs = document.querySelectorAll(".orb");
-    if (hero && orbs.length) {
-      var tx = 0, ty = 0, cx = 0, cy = 0, orbRaf = null;
-      function applyOrbs() {
-        cx += (tx - cx) * 0.06;
-        cy += (ty - cy) * 0.06;
-        orbs.forEach(function (o, idx) {
-          var f = (idx + 1) * 26;
-          o.style.translate = (cx * f).toFixed(1) + "px " + (cy * f).toFixed(1) + "px";
+    /* Hero photo parallax on scroll */
+    var heroPhoto = document.querySelector(".hero-photo");
+    var heroSection = document.querySelector(".hero");
+    if (heroPhoto && heroSection) {
+      var photoTicking = false;
+      window.addEventListener("scroll", function () {
+        if (photoTicking) return;
+        photoTicking = true;
+        requestAnimationFrame(function () {
+          var y = window.scrollY || 0;
+          var h = heroSection.offsetHeight;
+          if (y < h * 1.2) {
+            heroPhoto.style.translate = "0 " + (y * 0.22).toFixed(1) + "px";
+          }
+          photoTicking = false;
         });
-        if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) {
-          orbRaf = requestAnimationFrame(applyOrbs);
-        } else { orbRaf = null; }
-      }
-      hero.addEventListener("mousemove", function (e) {
-        var r = hero.getBoundingClientRect();
-        tx = (e.clientX - r.left) / r.width - 0.5;
-        ty = (e.clientY - r.top) / r.height - 0.5;
-        if (!orbRaf) orbRaf = requestAnimationFrame(applyOrbs);
-      });
-      hero.addEventListener("mouseleave", function () {
-        tx = 0; ty = 0;
-        if (!orbRaf) orbRaf = requestAnimationFrame(applyOrbs);
-      });
+      }, { passive: true });
     }
+
+    /* Spotlight glow tracking on cards */
+    document.querySelectorAll(".card").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        card.style.setProperty("--my", (e.clientY - r.top) + "px");
+      });
+    });
 
     /* Magnetic buttons */
     document.querySelectorAll(".hero-actions .btn, .thursday-inner .btn").forEach(function (btn) {
@@ -213,6 +213,26 @@
       card.addEventListener("mouseleave", function () { card.style.transform = ""; });
     });
   }
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll(".faq-item").forEach(function (item) {
+    var btn = item.querySelector(".faq-q");
+    var panel = item.querySelector(".faq-a");
+    if (!btn || !panel) return;
+    btn.addEventListener("click", function () {
+      var isOpen = item.classList.contains("open");
+      document.querySelectorAll(".faq-item.open").forEach(function (other) {
+        other.classList.remove("open");
+        other.querySelector(".faq-a").style.maxHeight = "0px";
+        other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
 
   /* ---------- Back to top ---------- */
   var toTop = document.getElementById("toTop");
