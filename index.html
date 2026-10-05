@@ -15,6 +15,8 @@
 </head>
 <body>
 
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="#home">
@@ -24,16 +26,30 @@
           <small>FOOT HEALTH CLINIC</small>
         </span>
       </a>
-      <nav class="main-nav" id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#treatments">Treatments</a>
-        <a href="#warning-signs">Warning Signs</a>
-        <a href="#doctors">Doctors</a>
-        <a href="#contact">Contact</a>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <a href="#home" class="nav-link active">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Treatments
+            <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="#t-ulcer" role="menuitem">Diabetic Foot Ulcer Treatment</a>
+            <a href="#t-wound" role="menuitem">Advanced Wound Care</a>
+            <a href="#t-neuro" role="menuitem">Neuropathy Management</a>
+            <a href="#t-deformity" role="menuitem">Foot Deformity Correction</a>
+            <a href="#t-mobility" role="menuitem">Better Mobility &amp; Recovery</a>
+            <a href="#t-everyday" role="menuitem">Everyday Foot Problems</a>
+          </div>
+        </div>
+        <a href="#journey" class="nav-link">Care Journey</a>
+        <a href="#warning-signs" class="nav-link">Warning Signs</a>
+        <a href="#doctors" class="nav-link">Doctors</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-cta">
         <a class="btn btn-call" href="tel:+919912510108">Call 9912510108</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -43,54 +59,109 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Advance Center for Diabetic Foot Care &mdash; Karimnagar</p>
-          <h1>Complete Care for <span>Diabetic Foot</span> &amp; All Foot Problems</h1>
-          <p class="lede">Expert diagnosis, treatment, and follow-up for diabetic foot problems &mdash; all under one roof.</p>
-          <div class="hero-actions">
+          <p class="eyebrow anim" style="--d:.05s">Advance Center for Diabetic Foot Care &mdash; Karimnagar</p>
+          <h1 class="anim" style="--d:.15s">Complete Care for <span>Diabetic Foot</span> &amp; All Foot Problems</h1>
+          <p class="lede anim" style="--d:.25s">Expert diagnosis, treatment, and follow-up for diabetic foot problems &mdash; all under one roof.</p>
+          <div class="hero-actions anim" style="--d:.35s">
             <a class="btn btn-primary" href="tel:+919912510108">Call Now</a>
-            <a class="btn btn-outline" href="https://wa.me/919912510108" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a class="btn btn-ghost" href="https://wa.me/919912510108" target="_blank" rel="noopener">WhatsApp Us</a>
           </div>
-          <ul class="hero-points">
-            <li>Expert Care</li>
-            <li>Advanced Technology</li>
-            <li>Better Mobility</li>
-          </ul>
         </div>
-        <div class="hero-art">
-          <img src="assets/logo-new.png" alt="Dhruva Foot Health Clinic — foot health mascot">
+        <div class="hero-cards">
+          <div class="glass-card anim" style="--d:.5s">
+            <span class="glass-tag">Every Thursday</span>
+            <strong>Free Diabetic Foot Consultation</strong>
+            <a href="tel:+919912510108">Book your slot &rarr;</a>
+          </div>
+          <div class="glass-card anim" style="--d:.65s">
+            <span class="glass-tag">Open 24 Hours</span>
+            <strong>Foot emergency? We&rsquo;re here.</strong>
+            <a href="tel:+919912510108">9912510108</a>
+          </div>
+        </div>
+      </div>
+      <div class="stat-band">
+        <div class="container stat-grid">
+          <div class="stat anim" style="--d:.75s"><strong>2</strong><span>Specialist Doctors</span></div>
+          <div class="stat anim" style="--d:.85s"><strong>9+</strong><span>Foot Treatments</span></div>
+          <div class="stat anim" style="--d:.95s"><strong>24/7</strong><span>Open for Care</span></div>
+          <div class="stat anim" style="--d:1.05s"><strong>Free</strong><span>Consultation Every Thursday</span></div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section" id="treatments">
+    <!-- CARE JOURNEY -->
+    <section class="section" id="journey">
       <div class="container">
-        <p class="section-eyebrow">What we do</p>
-        <h2 class="section-title">Specialised Diabetic Foot Treatments</h2>
+        <p class="section-eyebrow reveal">How it works</p>
+        <h2 class="section-title reveal" style="--d:.1s">Your Care Journey, Step by Step</h2>
+        <p class="section-sub reveal" style="--d:.15s">From your first visit to full recovery, every step is planned, explained and followed through.</p>
+        <div class="timeline reveal" style="--d:.2s">
+          <div class="timeline-line" aria-hidden="true"></div>
+          <div class="t-step">
+            <div class="t-node">1</div>
+            <h3>Book Your Visit</h3>
+            <p>Call or WhatsApp us to book &mdash; consultations are free every Thursday.</p>
+          </div>
+          <div class="t-step">
+            <div class="t-node">2</div>
+            <h3>Foot Assessment</h3>
+            <p>A thorough examination of your feet, circulation and nerve health.</p>
+          </div>
+          <div class="t-step">
+            <div class="t-node">3</div>
+            <h3>Diagnosis &amp; Plan</h3>
+            <p>A clear diagnosis and a personalised treatment plan, explained simply.</p>
+          </div>
+          <div class="t-step">
+            <div class="t-node">4</div>
+            <h3>Treatment</h3>
+            <p>Advanced, evidence-based treatment by our specialist team.</p>
+          </div>
+          <div class="t-step">
+            <div class="t-node">5</div>
+            <h3>Review &amp; Follow-up</h3>
+            <p>Scheduled reviews track healing and adjust your care as needed.</p>
+          </div>
+          <div class="t-step">
+            <div class="t-node">6</div>
+            <h3>Ongoing Foot Health</h3>
+            <p>Guidance on daily foot care to keep you walking confidently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREATMENTS -->
+    <section class="section section-tint" id="treatments">
+      <div class="container">
+        <p class="section-eyebrow reveal">What we do</p>
+        <h2 class="section-title reveal" style="--d:.1s">Specialised Diabetic Foot Treatments</h2>
         <div class="cards">
-          <div class="card">
+          <div class="card lift reveal" id="t-ulcer" style="--d:.05s">
             <h3>Diabetic Foot Ulcer Treatment</h3>
             <p>Specialised care for diabetic foot ulcers, from early assessment to complete healing.</p>
           </div>
-          <div class="card">
+          <div class="card lift reveal" id="t-wound" style="--d:.12s">
             <h3>Advanced Wound Care</h3>
             <p>Modern wound-care protocols for infections and wounds that won&rsquo;t heal.</p>
           </div>
-          <div class="card">
+          <div class="card lift reveal" id="t-neuro" style="--d:.19s">
             <h3>Neuropathy Management</h3>
             <p>Diagnosis and management of nerve pain, numbness and poor circulation.</p>
           </div>
-          <div class="card">
+          <div class="card lift reveal" id="t-deformity" style="--d:.26s">
             <h3>Foot Deformity Correction</h3>
             <p>Correction of foot and toe deformities to restore comfort and mobility.</p>
           </div>
-          <div class="card">
+          <div class="card lift reveal" id="t-mobility" style="--d:.33s">
             <h3>Better Mobility &amp; Recovery</h3>
             <p>Rehabilitation-focused care to get you walking confidently again.</p>
           </div>
-          <div class="card">
+          <div class="card lift reveal" id="t-everyday" style="--d:.4s">
             <h3>Everyday Foot Problems</h3>
             <p>Heel pain &amp; plantar fasciitis, corns, callus &amp; cracks, sports injuries and post-surgical foot care.</p>
           </div>
@@ -101,16 +172,16 @@
     <!-- WARNING SIGNS -->
     <section class="section section-dark" id="warning-signs">
       <div class="container">
-        <p class="section-eyebrow">Don&rsquo;t ignore</p>
-        <h2 class="section-title">Diabetic Foot Problems &mdash; Warning Signs</h2>
-        <p class="section-sub">If you notice any of these, see a foot specialist early. Early detection means timely treatment and better recovery.</p>
+        <p class="section-eyebrow reveal">Don&rsquo;t ignore</p>
+        <h2 class="section-title reveal" style="--d:.1s">Diabetic Foot Problems &mdash; Warning Signs</h2>
+        <p class="section-sub reveal" style="--d:.15s">If you notice any of these, see a foot specialist early. Early detection means timely treatment and better recovery.</p>
         <div class="cards">
-          <div class="card warn"><h3>Diabetic Foot Ulcer</h3><p>Open sores on the foot that need urgent specialist care.</p></div>
-          <div class="card warn"><h3>Infections &amp; Wounds</h3><p>Wounds that are slow to heal or show signs of infection.</p></div>
-          <div class="card warn"><h3>Corns, Callus &amp; Cracks</h3><p>Hardened skin and cracks that can turn into ulcers.</p></div>
-          <div class="card warn"><h3>Foot Deformity</h3><p>Changes in foot shape or toe deformity.</p></div>
-          <div class="card warn"><h3>Poor Circulation &amp; Numbness</h3><p>Tingling, numbness, cold feet or colour changes.</p></div>
-          <div class="card warn"><h3>Gangrene <small>(severe cases)</small></h3><p>Tissue damage needing immediate emergency care.</p></div>
+          <div class="card warn lift reveal" style="--d:.05s"><h3>Diabetic Foot Ulcer</h3><p>Open sores on the foot that need urgent specialist care.</p></div>
+          <div class="card warn lift reveal" style="--d:.12s"><h3>Infections &amp; Wounds</h3><p>Wounds that are slow to heal or show signs of infection.</p></div>
+          <div class="card warn lift reveal" style="--d:.19s"><h3>Corns, Callus &amp; Cracks</h3><p>Hardened skin and cracks that can turn into ulcers.</p></div>
+          <div class="card warn lift reveal" style="--d:.26s"><h3>Foot Deformity</h3><p>Changes in foot shape or toe deformity.</p></div>
+          <div class="card warn lift reveal" style="--d:.33s"><h3>Poor Circulation &amp; Numbness</h3><p>Tingling, numbness, cold feet or colour changes.</p></div>
+          <div class="card warn lift reveal" style="--d:.4s"><h3>Gangrene <small>(severe cases)</small></h3><p>Tissue damage needing immediate emergency care.</p></div>
         </div>
       </div>
     </section>
@@ -118,15 +189,15 @@
     <!-- DAILY CARE -->
     <section class="section" id="awareness">
       <div class="container">
-        <p class="section-eyebrow">Awareness</p>
-        <h2 class="section-title">Protect Your Feet, Protect Your Life</h2>
+        <p class="section-eyebrow reveal">Awareness</p>
+        <h2 class="section-title reveal" style="--d:.1s">Protect Your Feet, Protect Your Life</h2>
         <div class="tips">
-          <div class="tip"><span class="tick">&#10003;</span><p>Check your feet daily for cuts, blisters, redness or swelling.</p></div>
-          <div class="tip"><span class="tick">&#10003;</span><p>Wash your feet daily with lukewarm water &amp; dry them gently.</p></div>
-          <div class="tip"><span class="tick">&#10003;</span><p>Moisturize to prevent dry skin and cracks.</p></div>
-          <div class="tip"><span class="tick">&#10003;</span><p>Wear comfortable, well-fitting footwear. Never walk barefoot.</p></div>
-          <div class="tip"><span class="tick">&#10003;</span><p>Keep your blood sugar under control. Avoid smoking &amp; alcohol.</p></div>
-          <div class="tip"><span class="tick">&#10003;</span><p>Do not ignore foot pain or numbness &mdash; visit a specialist regularly.</p></div>
+          <div class="tip lift reveal" style="--d:.05s"><span class="tick">&#10003;</span><p>Check your feet daily for cuts, blisters, redness or swelling.</p></div>
+          <div class="tip lift reveal" style="--d:.1s"><span class="tick">&#10003;</span><p>Wash your feet daily with lukewarm water &amp; dry them gently.</p></div>
+          <div class="tip lift reveal" style="--d:.15s"><span class="tick">&#10003;</span><p>Moisturize to prevent dry skin and cracks &mdash; avoid between the toes.</p></div>
+          <div class="tip lift reveal" style="--d:.2s"><span class="tick">&#10003;</span><p>Wear comfortable, well-fitting footwear. Never walk barefoot.</p></div>
+          <div class="tip lift reveal" style="--d:.25s"><span class="tick">&#10003;</span><p>Keep your blood sugar under control. Avoid smoking &amp; alcohol.</p></div>
+          <div class="tip lift reveal" style="--d:.3s"><span class="tick">&#10003;</span><p>Do not ignore foot pain or numbness &mdash; visit a specialist regularly.</p></div>
         </div>
       </div>
     </section>
@@ -134,10 +205,10 @@
     <!-- DOCTORS -->
     <section class="section section-tint" id="doctors">
       <div class="container">
-        <p class="section-eyebrow">Meet our doctors</p>
-        <h2 class="section-title">Expert Care You Can Trust</h2>
+        <p class="section-eyebrow reveal">Meet our doctors</p>
+        <h2 class="section-title reveal" style="--d:.1s">Expert Care You Can Trust</h2>
         <div class="doctors">
-          <article class="doctor">
+          <article class="doctor lift reveal" style="--d:.1s">
             <div class="doctor-photo"><img src="assets/doctor-sreekar-full.jpg" alt="Dr Sreekar Sura"></div>
             <div class="doctor-info">
               <h3>Dr Sreekar Sura</h3>
@@ -146,7 +217,7 @@
               <p class="focus">Diabetology &amp; diabetic foot care</p>
             </div>
           </article>
-          <article class="doctor">
+          <article class="doctor lift reveal" style="--d:.2s">
             <div class="doctor-photo"><img src="assets/doctor-ashok-full.png" alt="Dr Ashok Reddy"></div>
             <div class="doctor-info">
               <h3>Dr Ashok Reddy</h3>
@@ -162,29 +233,41 @@
     <!-- WHY CHOOSE US -->
     <section class="section" id="why-us">
       <div class="container">
-        <p class="section-eyebrow">Why choose us</p>
-        <h2 class="section-title">Your Feet Deserve the Best Care</h2>
+        <p class="section-eyebrow reveal">Why choose us</p>
+        <h2 class="section-title reveal" style="--d:.1s">Your Feet Deserve the Best Care</h2>
         <div class="cards four">
-          <div class="card"><h3>Experienced Specialists</h3><p>A diabetologist and a plastic surgeon working together on every case.</p></div>
-          <div class="card"><h3>Advanced Treatment</h3><p>Modern technology and evidence-based protocols for faster healing.</p></div>
-          <div class="card"><h3>Personalized Plans</h3><p>Treatment tailored to your condition, lifestyle and recovery goals.</p></div>
-          <div class="card"><h3>Patient-Centric Care</h3><p>Compassionate follow-up at every step &mdash; we care for every step.</p></div>
+          <div class="card lift reveal" style="--d:.05s"><h3>Experienced Specialists</h3><p>A diabetologist and a plastic surgeon working together on every case.</p></div>
+          <div class="card lift reveal" style="--d:.12s"><h3>Advanced Treatment</h3><p>Modern technology and evidence-based protocols for faster healing.</p></div>
+          <div class="card lift reveal" style="--d:.19s"><h3>Personalized Plans</h3><p>Treatment tailored to your condition, lifestyle and recovery goals.</p></div>
+          <div class="card lift reveal" style="--d:.26s"><h3>Patient-Centric Care</h3><p>Compassionate follow-up at every step &mdash; we care for every step.</p></div>
         </div>
+      </div>
+    </section>
+
+    <!-- THURSDAY OFFER -->
+    <section class="thursday-band reveal" id="thursday">
+      <div class="container thursday-inner">
+        <div>
+          <p class="thursday-eyebrow">Limited offer</p>
+          <h2>Free Diabetic Foot Consultation &mdash; Every Thursday</h2>
+          <p>Meet our specialists, get your feet assessed, and know your risk &mdash; at no cost, every Thursday.</p>
+        </div>
+        <a class="btn btn-gold" href="tel:+919912510108">Book Your Free Slot</a>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section section-dark" id="contact">
       <div class="container">
-        <p class="section-eyebrow">Visit us</p>
-        <h2 class="section-title">Book Your Consultation</h2>
+        <p class="section-eyebrow reveal">Visit us</p>
+        <h2 class="section-title reveal" style="--d:.1s">Book Your Consultation</h2>
         <div class="contact-grid">
-          <div class="contact-card">
+          <div class="contact-card lift reveal" style="--d:.05s">
             <h3>Clinic Address</h3>
             <p>3-6-767, Subashnagar Railway Station Road,<br>Karimnagar 505001, Telangana</p>
             <a class="btn btn-outline-light" href="https://www.google.com/maps/search/?api=1&amp;query=Dhruva+Foot+Health+Clinic+Karimnagar" target="_blank" rel="noopener">Get Directions</a>
           </div>
-          <div class="contact-card">
+          <div class="contact-card lift reveal" style="--d:.15s">
             <h3>Call or WhatsApp</h3>
             <p class="big-phone"><a href="tel:+919912510108">9912510108</a></p>
             <div class="contact-actions">
@@ -192,7 +275,7 @@
               <a class="btn btn-outline-light" href="https://wa.me/919912510108" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
-          <div class="contact-card">
+          <div class="contact-card lift reveal" style="--d:.25s">
             <h3>Email &amp; Hours</h3>
             <p><a href="mailto:dhruvafoothealthclinic@gmail.com">dhruvafoothealthclinic@gmail.com</a></p>
             <p class="hours">Open 24 hours</p>
@@ -203,17 +286,59 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo-new.png" alt="Dhruva Foot Health Clinic logo">
-        <div>
-          <strong>DHRUVA FOOT HEALTH CLINIC</strong>
-          <small>Advance Center for Diabetic Foot Care</small>
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand-col">
+        <div class="footer-brand">
+          <img src="assets/logo-new.png" alt="Dhruva Foot Health Clinic logo">
+          <div>
+            <strong>DHRUVA FOOT HEALTH CLINIC</strong>
+            <small>Advance Center for Diabetic Foot Care</small>
+          </div>
+        </div>
+        <p class="footer-tag">Expert Care. Advanced Technology. Better Mobility.</p>
+        <div class="footer-actions">
+          <a class="btn btn-primary btn-sm" href="tel:+919912510108">Call Now</a>
+          <a class="btn btn-outline-light btn-sm" href="https://wa.me/919912510108" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
-      <p class="footer-note">We Care For Every Step &mdash; Karimnagar, Telangana</p>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#journey">Care Journey</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Treatments</h4>
+        <a href="#t-ulcer">Foot Ulcer Treatment</a>
+        <a href="#t-wound">Advanced Wound Care</a>
+        <a href="#t-neuro">Neuropathy Management</a>
+        <a href="#t-deformity">Deformity Correction</a>
+        <a href="#t-everyday">Everyday Foot Problems</a>
+      </div>
+      <div class="footer-col">
+        <h4>Reach Us</h4>
+        <p>3-6-767, Subashnagar Railway Station Road, Karimnagar 505001</p>
+        <p><a href="tel:+919912510108">9912510108</a></p>
+        <div class="social-row">
+          <a class="social-icon" href="https://www.instagram.com/dhruva_foothealthclinic" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>&copy; 2026 Dhruva Foot Health Clinic, Karimnagar. All rights reserved.</p>
+        <p class="footer-note">We Care For Every Step</p>
+      </div>
     </div>
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/919912510108" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
