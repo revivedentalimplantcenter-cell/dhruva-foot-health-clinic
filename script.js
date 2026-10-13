@@ -117,3 +117,23 @@
     sections.forEach(function (s) { obs.observe(s.el); });
   }
 })();
+
+/* ---- Foot health journal: render article cards from articles/index.json ---- */
+(function () {
+  var grid = document.getElementById('articlesGrid');
+  if (!grid) return;
+  fetch('articles/index.json')
+    .then(function (r) { if (!r.ok) throw new Error('no index'); return r.json(); })
+    .then(function (items) {
+      if (!items || !items.length) { grid.innerHTML = '<p class="section-sub">New articles coming soon.</p>'; return; }
+      grid.innerHTML = items.map(function (a) {
+        return '<article class="article-card">' +
+          '<p class="article-date">' + a.date + '</p>' +
+          '<h3><a href="articles/' + a.slug + '.html">' + a.title + '</a></h3>' +
+          '<p class="article-excerpt">' + a.excerpt + '</p>' +
+          '<a class="article-link" href="articles/' + a.slug + '.html">Read article &rarr;</a>' +
+          '</article>';
+      }).join('');
+    })
+    .catch(function () { grid.innerHTML = '<p class="section-sub">New articles coming soon.</p>'; });
+})();
