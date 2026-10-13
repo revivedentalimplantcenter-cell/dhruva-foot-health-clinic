@@ -692,3 +692,30 @@ a:focus-visible, button:focus-visible {
 .article-cta p { color: rgba(255,255,255,0.85); margin-top: 0.3rem; }
 .article-back { margin: 2rem 0 3rem; }
 .article-back a { color: var(--pine); font-weight: 600; text-decoration: none; }
+
+/* ---- Bilingual articles ---- */
+.article-lang {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--pine-deep);
+  background: var(--gold-soft);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin-left: 0.5rem;
+  vertical-align: 1px;
+}
+.lang-switch { margin: -1.2rem 0 2rem; font-size: 0.95rem; }
+.lang-switch a {
+  color: var(--pine);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  display: inline-block;
+}
+.lang-switch a:hover { background: var(--mist); }

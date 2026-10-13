@@ -127,8 +127,11 @@
     .then(function (items) {
       if (!items || !items.length) { grid.innerHTML = '<p class="section-sub">New articles coming soon.</p>'; return; }
       grid.innerHTML = items.map(function (a) {
+        var lang = a.lang === 'te'
+          ? '<span class="article-lang">తెలుగు</span>'
+          : '<span class="article-lang">English</span>';
         return '<article class="article-card">' +
-          '<p class="article-date">' + a.date + '</p>' +
+          '<p class="article-date">' + a.date + ' ' + lang + '</p>' +
           '<h3><a href="articles/' + a.slug + '.html">' + a.title + '</a></h3>' +
           '<p class="article-excerpt">' + a.excerpt + '</p>' +
           '<a class="article-link" href="articles/' + a.slug + '.html">Read article &rarr;</a>' +
