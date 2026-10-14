@@ -4,6 +4,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- Mobile nav ---------- */
@@ -76,6 +78,22 @@
     drawPath();
   } else if (path) {
     path.style.strokeDasharray = "none";
+  }
+
+  /* ---------- Scroll reveals ---------- */
+  var rvEls = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window && !reduceMotion && rvEls.length) {
+    var rObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          rObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    rvEls.forEach(function (el) { rObs.observe(el); });
+  } else {
+    rvEls.forEach(function (el) { el.classList.add("in"); });
   }
 
   /* ---------- Back to top ---------- */
