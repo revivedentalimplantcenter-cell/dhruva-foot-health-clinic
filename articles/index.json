@@ -1,1 +1,37 @@
-[{"date":"13 October 2026","excerpt":"What 'diabetic foot' means, how diabetes harms the feet, and the basics of protecting them.","lang":"en","slug":"2026-10-13-diabetic-foot","title":"Diabetic Foot: What It Is and Why It Needs Special Care"},{"date":"13 అక్టోబర్ 2026","excerpt":"డయాబెటిక్ ఫుట్ అంటే ఏమిటి, మధుమేహం పాదాలను ఎలా దెబ్బతీస్తుంది, పాదాలను కాపాడుకునే ప్రాథమిక మార్గాలు.","lang":"te","slug":"2026-10-13-diabetic-foot-te","title":"డయాబెటిక్ ఫుట్ అంటే ఏమిటి? ఎందుకు ప్రత్యేక శ్రద్ధ అవసరం"},{"date":"13 October 2026","excerpt":"Diabetic nerve damage can hide small injuries until they become serious. Here is a simple daily routine to catch problems early.","lang":"en","slug":"2026-10-13-daily-foot-check","title":"The 5-Minute Daily Foot Check Every Person With Diabetes Should Do"}]
+[
+  {
+    "slug": "2026-10-14-monsoon-foot-care",
+    "title": "Monsoon Foot Care for People With Diabetes: Staying Safe in Wet Weather",
+    "date": "14 October 2026",
+    "lang": "en",
+    "excerpt": "Wet feet raise the risk of fungal infections and foot ulcers in diabetes. How to keep feet dry, choose safe monsoon footwear, and spot warning signs early."
+  },
+  {
+    "slug": "2026-10-14-monsoon-foot-care-te",
+    "title": "వర్షాకాలంలో పాదాల సంరక్షణ: మధుమేహం ఉన్నవారు తడి వాతావరణంలో జాగ్రత్తగా ఉండాలి",
+    "date": "14 అక్టోబర్ 2026",
+    "lang": "te",
+    "excerpt": "తడిగా ఉండే పాదాల వల్ల మధుమేహం ఉన్నవారిలో ఇన్ఫెక్షన్లు, పుండ్లు వచ్చే ప్రమాదం పెరుగుతుంది. పాదాలను పొడిగా ఉంచే మార్గాలు, సురక్షితమైన చెప్పులు, హెచ్చరిక లక్షణాలు."
+  },
+  {
+    "date": "13 October 2026",
+    "excerpt": "What 'diabetic foot' means, how diabetes harms the feet, and the basics of protecting them.",
+    "lang": "en",
+    "slug": "2026-10-13-diabetic-foot",
+    "title": "Diabetic Foot: What It Is and Why It Needs Special Care"
+  },
+  {
+    "date": "13 అక్టోబర్ 2026",
+    "excerpt": "డయాబెటిక్ ఫుట్ అంటే ఏమిటి, మధుమేహం పాదాలను ఎలా దెబ్బతీస్తుంది, పాదాలను కాపాడుకునే ప్రాథమిక మార్గాలు.",
+    "lang": "te",
+    "slug": "2026-10-13-diabetic-foot-te",
+    "title": "డయాబెటిక్ ఫుట్ అంటే ఏమిటి? ఎందుకు ప్రత్యేక శ్రద్ధ అవసరం"
+  },
+  {
+    "date": "13 October 2026",
+    "excerpt": "Diabetic nerve damage can hide small injuries until they become serious. Here is a simple daily routine to catch problems early.",
+    "lang": "en",
+    "slug": "2026-10-13-daily-foot-check",
+    "title": "The 5-Minute Daily Foot Check Every Person With Diabetes Should Do"
+  }
+]
