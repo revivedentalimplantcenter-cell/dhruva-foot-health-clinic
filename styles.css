@@ -248,12 +248,11 @@ h2 { font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 0.6rem; }
     linear-gradient(180deg, #f2faf8 0%, #ffffff 78%);
 }
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 4rem;
-  align-items: center;
   position: relative;
   z-index: 2;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
 }
 .hero h1 {
   font-size: clamp(2.7rem, 5.4vw, 4.4rem);
@@ -263,8 +262,8 @@ h2 { font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 0.6rem; }
 .hero h1 .hl {
   color: var(--teal-ink);
 }
-.lede { font-size: 1.2rem; color: var(--muted); max-width: 34rem; margin-bottom: 2.2rem; }
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
+.lede { font-size: 1.2rem; color: var(--muted); max-width: 36rem; margin: 0 auto 2.2rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.6rem; justify-content: center; }
 .hero-note {
   display: inline-flex;
   align-items: center;
@@ -278,26 +277,6 @@ h2 { font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 0.6rem; }
   padding: 0.55rem 1.2rem;
 }
 .hero-note::before { content: "✦"; color: var(--sun-deep); }
-
-.hero-visual { position: relative; }
-.hero-arch {
-  border-radius: 999px 999px 28px 28px;
-  overflow: hidden;
-  aspect-ratio: 0.82;
-  max-height: 560px;
-  width: 100%;
-  background: var(--tint);
-  border: 8px solid #fff;
-  box-shadow: var(--shadow);
-}
-.hero-arch img { width: 100%; height: 100%; object-fit: cover; }
-.hero-caption {
-  margin-top: 1rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 500;
-}
 
 .facts {
   border-top: 1px solid var(--line);
@@ -746,8 +725,6 @@ a:focus-visible, button:focus-visible {
   .nav-link { font-size: 1.1rem; padding: 0.6rem 0; }
   .nav-toggle { display: flex; }
   .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; padding: 0 0 0 1rem; min-width: 0; }
-  .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-arch { max-height: 480px; }
   .facts-grid { grid-template-columns: repeat(2, 1fr); }
   .warn-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .doctors { grid-template-columns: 1fr; gap: 1.6rem; }
