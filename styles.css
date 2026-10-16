@@ -995,3 +995,15 @@ html.js .rv.in { opacity: 1; transform: none; }
   .hbadge { padding: 0.8rem 1.1rem; }
   .blob { opacity: 0.4; }
 }
+
+/* Telugu journal section: proper Telugu type */
+.nav-link[href="#articles-te"],
+#articles-te .kicker,
+#articles-te h2,
+#articles-te .section-sub,
+#articles-te .article-card h3,
+#articles-te .article-card .article-excerpt,
+#articles-te .article-card .article-date,
+#articles-te .article-card .article-link {
+  font-family: 'Noto Sans Telugu', 'Noto Sans', sans-serif;
+}
