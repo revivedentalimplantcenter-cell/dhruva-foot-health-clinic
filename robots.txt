@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhruvafoothealthclinic.arplasticsurgery.co.in/sitemap.xml
