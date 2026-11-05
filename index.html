@@ -15,6 +15,50 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Dhruva Foot Health Clinic",
+    "alternateName": "Dhruva Foot Health Lab",
+    "description": "Advance Center for Diabetic Foot Care in Karimnagar — diagnosis, treatment and follow-up for diabetic foot ulcers, wounds, neuropathy and foot problems.",
+    "url": "https://dhruvafoothealthclinic.arplasticsurgery.co.in/",
+    "telephone": "+91 99125 10108",
+    "email": "dhruvafoothealthclinic@gmail.com",
+    "image": "https://dhruvafoothealthclinic.arplasticsurgery.co.in/assets/logo-new.png",
+    "logo": "https://dhruvafoothealthclinic.arplasticsurgery.co.in/assets/logo-new.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3-6-767, Subashnagar Railway Station Road",
+      "addressLocality": "Karimnagar",
+      "addressRegion": "Telangana",
+      "postalCode": "505001",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Su 00:00-24:00",
+    "employee": [
+      {
+        "@type": "Physician",
+        "name": "Dr Sreekar Sura",
+        "jobTitle": "Diabetologist",
+        "medicalSpecialty": "Endocrine"
+      },
+      {
+        "@type": "Physician",
+        "name": "Dr Ashok Reddy",
+        "jobTitle": "Plastic, Cosmetic and Hair Transplant Surgeon"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "8"
+    },
+    "sameAs": [
+      "https://www.instagram.com/dhruva_foothealthclinic"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -265,6 +309,26 @@
       </div>
     </section>
 
+    <!-- GOOGLE RATING -->
+    <section class="section" id="reviews">
+      <div class="wrap rv">
+        <p class="kicker">Google reviews</p>
+        <h2>Rated by patients on Google</h2>
+        <div class="reviews-card">
+          <p class="reviews-score">4.9</p>
+          <p class="reviews-stars" role="img" aria-label="Rated 4.9 out of 5 stars">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="#ffb020" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="#ffb020" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="#ffb020" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="#ffb020" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><defs><linearGradient id="star49"><stop offset="90%" stop-color="#ffb020"/><stop offset="90%" stop-color="#dbe7e4"/></linearGradient></defs><path fill="url(#star49)" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>
+          </p>
+          <p class="reviews-text">Dhruva Foot Health Clinic is rated <strong>4.9 out of 5</strong> based on <strong>8 reviews</strong> on Google.</p>
+          <a class="btn btn-pine" href="https://www.google.com/maps/search/?api=1&amp;query=Dhruva+Foot+Health+Clinic+Karimnagar" target="_blank" rel="noopener">Read reviews on Google</a>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="wrap rv faq-wrap">
@@ -369,6 +433,29 @@
             <p><a href="mailto:dhruvafoothealthclinic@gmail.com">dhruvafoothealthclinic@gmail.com</a></p>
             <p class="hours">Open 24 hours, every day</p>
           </div>
+        </div>
+
+        <div class="appt-card">
+          <h3>Request an appointment</h3>
+          <p class="appt-sub">Fill in your details and tap send — WhatsApp will open with your request ready to send to the clinic.</p>
+          <form id="apptForm" novalidate>
+            <div class="appt-grid">
+              <label class="appt-field">Your name
+                <input type="text" id="apptName" name="name" autocomplete="name" placeholder="Full name">
+              </label>
+              <label class="appt-field">Mobile number
+                <input type="tel" id="apptPhone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile number">
+              </label>
+              <label class="appt-field">Preferred day
+                <input type="text" id="apptDay" name="day" placeholder="e.g. Thursday, or tomorrow morning">
+              </label>
+              <label class="appt-field appt-wide">Reason for visit
+                <textarea id="apptReason" name="reason" rows="3" placeholder="Briefly, what is the foot problem?"></textarea>
+              </label>
+            </div>
+            <p class="appt-error" id="apptError" hidden>Please enter your name and a valid 10-digit mobile number.</p>
+            <button type="submit" class="btn btn-pine btn-lg">Send request on WhatsApp</button>
+          </form>
         </div>
       </div>
     </section>

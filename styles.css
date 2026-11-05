@@ -1007,3 +1007,112 @@ html.js .rv.in { opacity: 1; transform: none; }
 #articles-te .article-card .article-link {
   font-family: 'Noto Sans Telugu', 'Noto Sans', sans-serif;
 }
+
+/* ---------- Google rating ---------- */
+.reviews-card {
+  margin-top: 1rem;
+  max-width: 640px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 2.6rem 2.2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.reviews-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--sun));
+}
+.reviews-score {
+  font-family: var(--display);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+}
+.reviews-stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 0.9rem 0 1.1rem;
+}
+.reviews-text { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.6rem; }
+.reviews-text strong { color: var(--ink); }
+
+/* ---------- Appointment request ---------- */
+.appt-card {
+  margin-top: 1.6rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 2.2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.appt-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--sun));
+}
+.appt-card h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+.appt-sub { color: var(--muted); margin-bottom: 1.5rem; max-width: 40rem; }
+.appt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+.appt-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.appt-wide { grid-column: 1 / -1; }
+.appt-field input,
+.appt-field textarea {
+  font: inherit;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--tint-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+.appt-field input:focus,
+.appt-field textarea:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+  background: #fff;
+}
+.appt-error { color: #b3261e; font-weight: 600; margin-bottom: 1rem; }
+@media (max-width: 720px) {
+  .appt-grid { grid-template-columns: 1fr; }
+  .reviews-card { padding: 2.2rem 1.4rem; }
+}
+
+/* ---------- Related articles (article pages) ---------- */
+.related-articles {
+  margin: 2.4rem 0 0;
+  padding: 1.6rem 1.8rem;
+  background: var(--tint-2);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+}
+.related-articles h2 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+.related-articles ul { margin: 0 0 0 1.2rem; }
+.related-articles li { margin-bottom: 0.45rem; }
+.related-articles li::marker { color: var(--teal); }
+.related-articles a { color: var(--teal-ink); font-weight: 600; text-decoration: none; }
+.related-articles a:hover { text-decoration: underline; }

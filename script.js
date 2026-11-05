@@ -171,3 +171,32 @@
       if (gridTe) gridTe.innerHTML = '<p class="section-sub">త్వరలో కొత్త వ్యాసాలు.</p>';
     });
 })();
+
+/* ---- Appointment request form: compose a WhatsApp message to the clinic ---- */
+(function () {
+  var form = document.getElementById('apptForm');
+  if (!form) return;
+  var err = document.getElementById('apptError');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('apptName').value.trim();
+    var digits = document.getElementById('apptPhone').value.replace(/\D/g, '');
+    if (digits.length === 12 && digits.indexOf('91') === 0) digits = digits.slice(2);
+    if (digits.length === 11 && digits.charAt(0) === '0') digits = digits.slice(1);
+    var day = document.getElementById('apptDay').value.trim();
+    var reason = document.getElementById('apptReason').value.trim();
+    if (!name || digits.length !== 10) {
+      err.hidden = false;
+      return;
+    }
+    err.hidden = true;
+    var lines = [
+      'Appointment request — Dhruva Foot Health Clinic',
+      'Name: ' + name,
+      'Mobile: ' + digits
+    ];
+    if (day) lines.push('Preferred day: ' + day);
+    if (reason) lines.push('Reason: ' + reason);
+    window.open('https://wa.me/919912510108?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+  });
+})();
